@@ -1,0 +1,101 @@
+/*
+ * FONT: OpenSans
+ */
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/open_sans/static/OpenSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/open_sans/static/OpenSans-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Medium */
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/open_sans/static/OpenSans-Medium.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/open_sans/static/OpenSans-MediumItalic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Bold */
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/open_sans/static/OpenSans-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/open_sans/static/OpenSans-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+/*
+ * FONT: OpenSans
+ */
+
+ @font-face {
+    font-family: Nunito;
+    src: url(fonts/nunito/static/Nunito-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/nunito/static/Nunito-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Medium */
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/nunito/static/Nunito-Medium.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/nunito/static/Nunito-MediumItalic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Bold */
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/nunito/static/Nunito-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/nunito/static/Nunito-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}

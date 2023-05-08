@@ -1,0 +1,19 @@
+{
+  "name": "weblog",
+  "version": "0.1.0",
+  "description": "Simple self-hosted blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weblog",
+    "blog"
+  ],
+  "author": "b3yc0d3",
+  "license": "MIT",
+  "dependencies": {
+    "adler-32": "^1.3.1",
+    "express": "^4.18.2"
+  }
+}
