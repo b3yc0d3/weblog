@@ -1,0 +1,153 @@
+/*
+ * FONT: OpenSans
+ */
+
+@font-face {
+    font-family: OpenSans;
+    src: url(open_sans/static/OpenSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(open_sans/static/OpenSans-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Medium */
+@font-face {
+    font-family: OpenSans;
+    src: url(open_sans/static/OpenSans-Medium.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(open_sans/static/OpenSans-MediumItalic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Bold */
+@font-face {
+    font-family: OpenSans;
+    src: url(open_sans/static/OpenSans-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(open_sans/static/OpenSans-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+/*
+ * FONT: Nunito
+ */
+
+@font-face {
+    font-family: Nunito;
+    src: url(nunito/static/Nunito-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(nunito/static/Nunito-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Medium */
+@font-face {
+    font-family: Nunito;
+    src: url(nunito/static/Nunito-Medium.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(nunito/static/Nunito-MediumItalic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Bold */
+@font-face {
+    font-family: Nunito;
+    src: url(nunito/static/Nunito-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(nunito/static/Nunito-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+/*
+ * FONT: CascadiaCode
+ */
+
+@font-face {
+    font-family: CascadiaCode;
+    src: url(cascadia_code/static/CascadiaCode-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CascadiaCode;
+    src: url(cascadia_code/static/CascadiaCode-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Medium */
+@font-face {
+    font-family: CascadiaCode;
+    src: url(cascadia_code/static/CascadiaCode-SemiBold.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CascadiaCode;
+    src: url(cascadia_code/static/CascadiaCode-SemiBoldItalic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Bold */
+@font-face {
+    font-family: CascadiaCode;
+    src: url(cascadia_code/static/CascadiaCode-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CascadiaCode;
+    src: url(cascadia_code/static/CascadiaCode-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}

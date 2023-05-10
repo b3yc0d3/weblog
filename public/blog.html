@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de-EU">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ BLOG_POST_TITLE }} Weblog</title>
 
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/sish.min.css">
+
+    <script src="js/sish.js"></script>
 </head>
 
 <body>
@@ -34,11 +37,31 @@
                     justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
                     dolor
                     sit amet.</p>
-                <div class="highlight" lng="js">
-                    <div class="highlight-info">
-                        <div class="highlight-info-filename">main.js</div>
+
+                <div class="sish highlight" lng="c">
+                    <div class="sish-info">
+                        <div class="sish-info-filename">spm.h</div>
+                        <a href="https://github.com/b3yc0d3/spm/blob/master/spm.h" target="_blank"
+                            class="sish-info-src">source</a>
+                    </div>
+                    <pre>#ifndef __SPM_H
+#define __SPM_H
+
+#include <sys/types.h>
+
+static void usage(char *name);
+char *_getpass(const char *prompt);
+int authuser(const char *name);
+void execcmd(char *command, char *args[], uid_t uid);
+
+#endif /* __SPM_H */</pre>
+                </div>
+
+                <div class="sish highlight" lng="js">
+                    <div class="sish-info">
+                        <div class="sish-info-filename">main.js</div>
                         <a href="https://github.com/b3yc0d3/browser-detection-library/blob/master/README.md"
-                            target="_blank" class="highlight-info-src">source</a>
+                            target="_blank" class="sish-info-src">source</a>
                     </div>
                     <pre>// Get name of browser.
 console.log(bdl.browser.name);
@@ -63,10 +86,13 @@ console.log(bdl.browser.id);</pre>
 
         <article class="footer card">
             <div style="margin: 0 auto; width: fit-content;">
-                <span>Copyright 2023 Niklas K.</span> • <span>Fork on <a href="https://github.com/b3yc0d3/weblog.git">GitHub</a></span>
+                <span>Copyright 2023 Niklas K.</span> • <span>Fork on <a
+                        href="https://github.com/b3yc0d3/weblog.git">GitHub</a></span>
             </div>
         </article>
     </div>
+
+    <script src="js/codeBlock.js"></script>
 </body>
 
 </html>

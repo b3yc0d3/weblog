@@ -1,0 +1,73 @@
+// Inline Code
+$inlineCodeBackground: #222223;
+$inlineCodeColor: #e7e7e7;
+
+// Code Blocks
+$blockBackground: #222223;
+$baseColor: #e7e7e7;
+
+// Line Highlights
+$highlightBackground: #363638;
+$highlightAccent: #f7d87c;
+
+// Tokens
+$commentColor: #666666;
+$keywordColor: #d8a9ff;
+$punctuationColor: #a8a8a8;
+$propertyColor: #ffbfa9;
+$selectorColor: #25c242;
+$operatorColor: #a9ffe4;
+$variableColor: #ffbfa9;
+$functionColor: #dd4a68;
+$operatorBg: rgba(0, 0, 0, 0);
+
+$colorTokens: (
+    "comment": $commentColor,
+    "keyword": $keywordColor,
+    "keyword2": $keywordColor,
+    "punctuation": $punctuationColor,
+    "selector": $selectorColor,
+    "string": $selectorColor,
+    "operator": $operatorColor,
+    "variable": $variableColor,
+    "function": $functionColor,
+);
+
+:root {
+    --sish-inline-code-background: #{$inlineCodeBackground};
+    --sish-inline-code-color: #{$inlineCodeColor};
+    --sish-block-background: #{$blockBackground};
+    --sish-base-color: #{$baseColor};
+    --sish-block-surface: #2c2e31;
+}
+
+.sish {
+    margin-bottom: 16px;
+    background: var(--sish-block-background);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 16px;
+    color: var(--sish-base-color);
+
+    &-info {
+        font-size: 14px;
+        padding: 8px 16px;
+        background: var(--sish-block-surface);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    pre {
+        padding: 16px;
+        font-size: 85%;
+        font-family: CascadiaCode;
+        overflow-x: auto;
+        line-height: 1.45;
+    }
+
+    @each $name, $color in $colorTokens {
+        &-#{$name} {
+            color: #{$color} !important;
+        }
+    }
+}

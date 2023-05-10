@@ -14,7 +14,7 @@ $color-yellow-dark: #c2b725;
 $color-orange-dark: #c26425;
 
 $text-normal: #e7e7e7;
-$text-muted: #b5b5b5;
+$text-muted: #a8a8a8;
 $text-disabled: #9c9c9c;
 $text-invert: #18181a;
 
@@ -147,30 +147,6 @@ body {
         ul {
             padding-left: 16px;
             margin-bottom: 16px;
-        }
-
-        .highlight {
-            margin-bottom: 16px;
-            background: var(--highlight-container-background);
-            border-radius: 6px;
-            overflow: hidden;
-            font-size: 16px;
-
-            &-info {
-                font-size: 14px;
-                padding: 8px 16px;
-                background: var(--highlight-container-surface);
-                display: flex;
-                justify-content: space-between;
-            }
-
-            pre {
-                padding: 16px;
-                font-size: 85%;
-                font-family: CascadiaCode;
-                overflow-x: auto;
-                line-height: 1.45;
-            }
         }
     }
 
