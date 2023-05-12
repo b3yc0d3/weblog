@@ -1,5 +1,5 @@
 // Inline Code
-$inlineCodeBackground: #222223;
+$inlineCodeBackground: lighten(#222223, 5%);
 $inlineCodeColor: #e7e7e7;
 
 // Code Blocks
@@ -70,4 +70,12 @@ $colorTokens: (
             color: #{$color} !important;
         }
     }
+}
+
+code {
+    border-radius: 4px;
+    background: var(--sish-inline-code-background);
+    color: var(--sish-inline-code-color);
+    padding: 0 4px;
+    font-size: 14px;
 }

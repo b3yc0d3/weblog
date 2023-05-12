@@ -4,7 +4,8 @@
   "description": "Simple self-hosted blog",
   "main": "index.js",
   "scripts": {
-    "dev:start": "nodemon index.js"
+    "dev:start": "nodemon index.js",
+    "dev:debug:markdown": "node debug.js"
   },
   "keywords": [
     "weblog",

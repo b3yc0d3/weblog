@@ -6,13 +6,14 @@ Simple self-hosted blog website.
 
 ### Todo
 
-- [ ] Simple Markdown Parser  
+- [ ] Build Script  
 - [ ] Admin Panel :: Create Post  
-- [ ] Front-End :: Code Highlighting  
 
 ### In Progress
 
+- [ ] Simple Markdown Parser  
 
 ### Done ✓
 
+- [x] Front-End :: Code Highlighting  
 

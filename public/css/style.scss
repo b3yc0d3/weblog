@@ -1,5 +1,6 @@
 $color-background: #0f0f10;
 $color-surface: #1b1b1d; //lighten(#0f0f10, 5%);
+$color-border: #343437;//lighten(#1b1b1d, 10%);
 
 $color-blue: #2cadf6;
 $color-red: #f62c32;
@@ -14,8 +15,8 @@ $color-yellow-dark: #c2b725;
 $color-orange-dark: #c26425;
 
 $text-normal: #e7e7e7;
-$text-muted: #a8a8a8;
-$text-disabled: #9c9c9c;
+$text-muted: #959595; //darken(#e7e7e7, 32%);
+$text-disabled: #585858;
 $text-invert: #18181a;
 
 $highlight-container-background: #222223;
@@ -27,6 +28,7 @@ $highlight-container-surface: #2c2e31;
 
     --color-background: #{$color-background};
     --color-surface: #{$color-surface};
+    --color-border: #{$color-border};
 
     --color-blue: #{$color-blue};
     --color-red: #{$color-red};
@@ -148,10 +150,27 @@ body {
             padding-left: 16px;
             margin-bottom: 16px;
         }
+
+        bi {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        blockquote {
+            border-left: 0.25em var(--color-border) solid;
+            padding: 0 16px;
+            * {
+                color: var(--text-muted);
+            }
+            margin-bottom: 16px;
+        }
     }
 
     &-container {
         padding: 16px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px 0;
     }
 }
 
