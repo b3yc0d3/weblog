@@ -1,53 +1,9 @@
-$color-background: #0f0f10;
-$color-surface: #1b1b1d; //lighten(#0f0f10, 5%);
-$color-border: #343437;//lighten(#1b1b1d, 10%);
-
-$color-blue: #2cadf6;
-$color-red: #f62c32;
-$color-green: #2cf656;
-$color-yellow: #f6e72c;
-$color-orange: #f67a2c;
-
-$color-blue-dark: #2586c2;
-$color-red-dark: #c22527;
-$color-green-dark: #25c242;
-$color-yellow-dark: #c2b725;
-$color-orange-dark: #c26425;
-
-$text-normal: #e7e7e7;
-$text-muted: #959595; //darken(#e7e7e7, 32%);
-$text-disabled: #585858;
-$text-invert: #18181a;
-
-$highlight-container-background: #222223;
-$highlight-container-surface: #2c2e31;
+@import "./colors"; // Color config
+@import "./sish"; // For syntax highlighting
 
 :root {
     font-size: 16px;
     font-family: OpenSans;
-
-    --color-background: #{$color-background};
-    --color-surface: #{$color-surface};
-    --color-border: #{$color-border};
-
-    --color-blue: #{$color-blue};
-    --color-red: #{$color-red};
-    --color-green: #{$color-green};
-    --color-yellow: #{$color-yellow};
-    --color-orange: #{$color-orange};
-    --color-blue-dark: #{$color-blue-dark};
-    --color-red-dark: #{$color-red-dark};
-    --color-green-dark: #{$color-green-dark};
-    --color-yellow-dark: #{$color-yellow-dark};
-    --color-orange-dark: #{$color-orange-dark};
-
-    --text-normal: #{$text-normal};
-    --text-muted: #{$text-muted};
-    --text-disabled: #{$text-disabled};
-    --text-invert: #{$text-invert};
-
-    --highlight-container-background: #{$highlight-container-background};
-    --highlight-container-surface: #{$highlight-container-surface};
 }
 
 * {

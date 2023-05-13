@@ -1,6 +1,20 @@
 # WEBLog
 Simple self-hosted blog website.
 
+## Build
+```console
+$ git clone https://github.com/b3yc0d3/weblog.git
+$ cd weblog
+$ npm install
+$ npm run build
+```
+
+## Development
+```console
+$ git clone https://github.com/b3yc0d3/weblog.git
+$ cd weblog
+$ npm run dev:build
+```
 
 ## Supported Markdown in articles
 | Element       | Markdown Syntax                                                                                                                                                                       |

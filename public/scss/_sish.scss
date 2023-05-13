@@ -1,26 +1,3 @@
-// Inline Code
-$inlineCodeBackground: lighten(#222223, 5%);
-$inlineCodeColor: #e7e7e7;
-
-// Code Blocks
-$blockBackground: #222223;
-$baseColor: #e7e7e7;
-
-// Line Highlights
-$highlightBackground: #363638;
-$highlightAccent: #f7d87c;
-
-// Tokens
-$commentColor: #666666;
-$keywordColor: #d8a9ff;
-$punctuationColor: #a8a8a8;
-$propertyColor: #ffbfa9;
-$selectorColor: #25c242;
-$operatorColor: #a9ffe4;
-$variableColor: #ffbfa9;
-$functionColor: #dd4a68;
-$operatorBg: rgba(0, 0, 0, 0);
-
 $colorTokens: (
     "comment": $commentColor,
     "keyword": $keywordColor,
@@ -32,14 +9,6 @@ $colorTokens: (
     "variable": $variableColor,
     "function": $functionColor,
 );
-
-:root {
-    --sish-inline-code-background: #{$inlineCodeBackground};
-    --sish-inline-code-color: #{$inlineCodeColor};
-    --sish-block-background: #{$blockBackground};
-    --sish-base-color: #{$baseColor};
-    --sish-block-surface: #2c2e31;
-}
 
 .sish {
     margin-bottom: 16px;
