@@ -1,6 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const expressEjsLayouts = require("express-ejs-layouts");
+const userConfig = require("./config/index");
+
+console.log(userConfig);
 
 const app = express();
 const PORT = process.env.PORT || 5000;

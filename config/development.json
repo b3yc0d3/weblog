@@ -1,0 +1,8 @@
+{
+    "port": 8080,
+    "language": "en",
+    "name": "WEBLog",
+    "pages": {
+        "copyright": "John Doe"
+    }
+}

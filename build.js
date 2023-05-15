@@ -7,7 +7,9 @@ const jsmin = require("jsmin").jsmin;
 
 // Paths
 const PATH_PUBLIC = path.join(__dirname, "public");
-const PATH_SCSS = path.join(PATH_PUBLIC, "scss");
+const PATH_DEV = path.join(__dirname, "public_dev");
+const PATH_DEV_SCSS = path.join(PATH_DEV, "scss");
+const PATH_DEV_JS = path.join(PATH_DEV, "js");
 const PATH_CSS = path.join(PATH_PUBLIC, "css");
 const PATH_JS = path.join(PATH_PUBLIC, "js");
 var IS_PRODUCTION = false;
@@ -33,21 +35,23 @@ function main() {
 
 function clean() {
     fs.rmSync(PATH_CSS, { recursive: true, force: true });
+    fs.rmSync(PATH_JS, { recursive: true, force: true });
 }
 
 function build() {
-    if (!fs.existsSync(PATH_CSS))
-        fs.mkdirSync(PATH_CSS, { recursive: true });
-
     sassCompress(IS_PRODUCTION);
     jsCompress(IS_PRODUCTION);
 }
 
 function sassCompress(minify = false) {
-    fs.readdirSync(PATH_SCSS).forEach((file) => {
+
+    if (!fs.existsSync(PATH_CSS))
+        fs.mkdirSync(PATH_CSS, { recursive: true });
+
+    fs.readdirSync(PATH_DEV_SCSS).forEach((file) => {
         if (!file.startsWith("_") && file.endsWith(".scss")) {
             const outName = file.split('.')[0];
-            const compressed = sass.compile(path.join(PATH_SCSS, file), { style: minify ? "compressed" : "expanded" });
+            const compressed = sass.compile(path.join(PATH_DEV_SCSS, file), { style: minify ? "compressed" : "expanded" });
 
             fs.writeFileSync(path.join(PATH_CSS, `${outName}.css`), compressed.css);
         }
@@ -55,10 +59,13 @@ function sassCompress(minify = false) {
 }
 
 function jsCompress(minify = false) {
-    fs.readdirSync(PATH_JS).forEach((file) => {
-        if (!file.startsWith("_") && file.endsWith(".dev.js")) {
+    if (!fs.existsSync(PATH_JS))
+        fs.mkdirSync(PATH_JS, { recursive: true });
+
+    fs.readdirSync(PATH_DEV_JS).forEach((file) => {
+        if (file.endsWith(".js")) {
             const outName = file.split('.')[0];
-            const compressed = jsmin(fs.readFileSync(path.join(PATH_JS, file), "utf-8"), minify ? 3 : 1);
+            const compressed = jsmin(fs.readFileSync(path.join(PATH_DEV_JS, file), "utf-8"), minify ? 3 : 1);
 
             fs.writeFileSync(path.join(PATH_JS, `${outName}.js`), compressed);
         }
