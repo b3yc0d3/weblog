@@ -7,6 +7,7 @@
     "dev:start": "nodemon app.js",
     "dev:build": "node build.js --build --dev",
     "clean": "node build.js --clean",
+    "init": "node build.js --init",
     "build": "node build.js --build --production"
   },
   "keywords": [
@@ -17,7 +18,6 @@
   "license": "MIT",
   "dependencies": {
     "adler-32": "^1.3.1",
-    "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2"
   },

@@ -3,7 +3,32 @@ const path = require("path");
 
 const yargs = require("yargs");
 const sass = require("sass");
+const { exit } = require("process");
 const jsmin = require("jsmin").jsmin;
+
+// Template Config
+var CONF_TEMPLATE = {
+    "port": 5000,
+    "language": "en",
+    "blogName": "Weblog",
+    "mongodb": {
+        "username": "USERNAME",
+        "password": "PASSWORD"
+    },
+    "owner": {
+        "name": "John Dow",
+        "email": "doejohn@example.com",
+        "welcome": "Hi, I am John",
+        "description": "Some interessting things about you",
+        "socials": [
+            {
+                "display": "Admin Panel",
+                "link": "/admin/panel",
+                "symbol": "ubadge"
+            }
+        ]
+    }
+}
 
 // Paths
 const PATH_PUBLIC = path.join(__dirname, "public");
@@ -18,6 +43,9 @@ function main() {
 
     const args = yargs.argv;
 
+    if (args.init)
+        init();
+
     if (args.clean)
         clean();
 
@@ -30,6 +58,22 @@ function main() {
     if (args.build) {
         clean();
         build();
+    }
+}
+
+function init() {
+    if (!fs.existsSync("/etc/weblog.json")) {
+        fs.writeFile("/etc/weblog.json", JSON.stringify(CONF_TEMPLATE), { flag: 'wx' }, function (err) {
+            if (err) {
+                console.group(err.message);
+                console.log(`code: ${err.code}`);
+                console.log(`syscall: ${err.syscall}`);
+                console.groupEnd();
+                console.log("Run this command with root privilege");
+                exit(1);
+            }
+            console.log("Created config file at \"/etc/weblog.json\"");
+        });
     }
 }
 

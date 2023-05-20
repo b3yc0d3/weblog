@@ -7,13 +7,16 @@ $ git clone https://github.com/b3yc0d3/weblog.git
 $ cd weblog
 $ npm install
 $ npm run build
+$ sudo npm run init
 ```
 
 ## Development
 ```console
 $ git clone https://github.com/b3yc0d3/weblog.git
 $ cd weblog
+$ npm install
 $ npm run dev:build
+$ sudo npm run init
 ```
 
 ## Supported Markdown in articles

@@ -1,8 +1,27 @@
 {
-    "port": 8080,
+    "port": 5000,
     "language": "en",
-    "name": "WEBLog",
-    "pages": {
-        "copyright": "John Doe"
+    "blogName": "Weblog",
+    "mongodb": {
+        "username": "USERNAME",
+        "password": "PASSWORD"
+    },
+    "owner": {
+        "name": "John Dow",
+        "email": "doejohn@example.com",
+        "welcome": "Hi, I am John",
+        "description": "Some interessting things about you",
+        "socials": [
+            {
+                "display": "John Doe",
+                "link": "https://de.linkedin.com/in/john-dow-000000000",
+                "symbol": "linkedin"
+            },
+            {
+                "display": "@johndoe",
+                "link": "https://social.example.de/@johndoe",
+                "symbol": "mastodon"
+            }
+        ]
     }
 }
