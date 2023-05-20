@@ -65,7 +65,7 @@ function jsCompress(minify = false) {
     fs.readdirSync(PATH_DEV_JS).forEach((file) => {
         if (file.endsWith(".js")) {
             const outName = file.split('.')[0];
-            const compressed = jsmin(fs.readFileSync(path.join(PATH_DEV_JS, file), "utf-8"), minify ? 3 : 1);
+            const compressed = jsmin(fs.readFileSync(path.join(PATH_DEV_JS, file), "utf-8"), minify ? 3 : 0);
 
             fs.writeFileSync(path.join(PATH_JS, `${outName}.js`), compressed);
         }

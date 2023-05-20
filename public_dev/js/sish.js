@@ -4,6 +4,7 @@
 
 const FALL_BACK_SYNTAX = {
     "string": [],
+    "comments": [],
     "patterns": [],
     "symbols": {}
 }
@@ -141,24 +142,26 @@ class SishLexer {
 }
 
 class Sish {
-    constructor(selector = ".sish") {
+    constructor(selector = "codeblock") {
         this.selector = selector;
+        this.syntax_url = "/sish/{{LNG}}.json";
     }
 
     run() {
         document.querySelectorAll(this.selector).forEach((codeBlock) => {
-            console.log(codeBlock);
             var container = codeBlock.getElementsByTagName('pre')[0];
             var language = codeBlock.getAttribute('lng');
             var inputCode = container.innerText;
 
-            container.innerHTML = this.highlight(language, inputCode);
+            this.highlight(language, inputCode).then((src) => {
+                container.innerHTML = src;
+            });
         });
     }
 
-    highlight(language, code) {
+    async highlight(language, code) {
         var lexer = new SishLexer(code, {
-            syntax: this.fetchSyntaxJSON(`data/sish/${language}.json`)
+            syntax: await this.fetchSyntaxJSON(language)
         });
         const tokens = lexer.tokenize();
         var highlightedCode = "";
@@ -188,28 +191,42 @@ class Sish {
         return highlightedCode;
     }
 
-    fetchSyntaxJSON(url) {
-        var data = this.httpGet(url);
+    async fetchSyntaxJSON(language) {
+        var data = await makeRequest("GET", this.syntax_url.replace("{{LNG}}", language));
         if (data) {
             return JSON.parse(data);
         }
 
         return FALL_BACK_SYNTAX;
     }
+}
 
-    httpGet(url) {
-        var returnValue = undefined;
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", url, false);
-
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                returnValue = xhttp.responseText;
+function makeRequest(method, url) {
+    return new Promise(function (resolve, reject) {
+        let xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.onload = function () {
+            if (this.status >= 200 && this.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject({
+                    status: this.status,
+                    statusText: xhr.statusText
+                });
             }
         };
-        xhttp.send();
-
-        return returnValue
-    }
+        xhr.onerror = function () {
+            reject({
+                status: this.status,
+                statusText: xhr.statusText
+            });
+        };
+        xhr.send();
+    });
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    console.log("SISH")
+    const sish = new Sish();
+    sish.run();
+});

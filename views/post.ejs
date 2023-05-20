@@ -1,11 +1,56 @@
-<div class="content-wrapper">
-    <article class="post-container card">
-        <div class="post-head">
-            <span class="post-head-published">Published 2023/05/08 @ 15:37 CEST</span>
-            <span class="post-head-title"><%= post.title %></span>
-        </div>
-        <div class="post-content"><%= post.content %></div>
-    </article>
+<article class="post">
+    <div class="post-body">
+        <h1>This is h1</h1>
+        <h2>This is h2</h2>
+        <h3>This is h3</h3>
+        <p><u>Lorem</u> ipsum <s>dolor</s> sit <b>amet</b>, consetetur <mark>sadipscing</mark> elitr, sed
+            diam
+            <span style="color: #FF3636; background: #7E1E1E;">nonumy</span>
+            eirmod
+            tempor <em>invidunt</em> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+            et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem
+            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+            eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam
+            et
+            justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+            ipsum
+            dolor
+            sit amet.
+        </p>
 
-    <%- include('footer.ejs') %>
-</div>
+        <codeblock lng="c" aria-description="C source code from file main.c">
+            <codeblock-info>
+                <div class="sish-info-filename">main.c</div>
+                <a href="https://github.com/b3yc0d3/browser-detection-library/blob/master/README.md"
+                    target="_blank" class="sish-info-src">source</a>
+            </codeblock-info>
+            <pre>#include &lt;stdio.h&gt;
+// Comment
+
+int main() {
+    printf("Hello World");
+    return 0;
+}</pre>
+        </codeblock>
+
+        <codeblock lng="c" aria-description="C source code from file main.c">
+            <codeblock-info>
+                <div class="sish-info-filename">main.c</div>
+                <a href="https://github.com/b3yc0d3/browser-detection-library/blob/master/README.md"
+                    target="_blank" class="sish-info-src">source</a>
+            </codeblock-info>
+            <pre>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello World");
+    return 0;
+}</pre>
+        </codeblock>
+    </div>
+</article>
+
+<script type="text/javascript" defer src="/js/sish.js"></script>

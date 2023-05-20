@@ -1,50 +1,17 @@
 $colorTokens: (
-    "comment": $commentColor,
-    "keyword": $keywordColor,
-    "keyword2": $keywordColor,
-    "punctuation": $punctuationColor,
-    "selector": $selectorColor,
-    "string": $selectorColor,
-    "operator": $operatorColor,
-    "variable": $variableColor,
-    "function": $functionColor,
+    "comment": $text-disabled,
+    "keyword": $color-purple,
+    "keyword2": $color-purple,
+    "punctuation": $text-normal,
+    "selector": $color-green,
+    "string": $color-green,
+    "operator": $color-mint,
+    "variable": $color-orange,
+    "function": $color-blue-light,
 );
 
-.sish {
-    margin-bottom: 16px;
-    background: var(--sish-block-background);
-    border-radius: 6px;
-    overflow: hidden;
-    font-size: 16px;
-    color: var(--sish-base-color);
-
-    &-info {
-        font-size: 14px;
-        padding: 8px 16px;
-        background: var(--sish-block-surface);
-        display: flex;
-        justify-content: space-between;
+@each $name, $color in $colorTokens {
+    .sish-#{$name} {
+        color: #{$color} !important;
     }
-
-    pre {
-        padding: 16px;
-        font-size: 85%;
-        font-family: CascadiaCode;
-        overflow-x: auto;
-        line-height: 1.45;
-    }
-
-    @each $name, $color in $colorTokens {
-        &-#{$name} {
-            color: #{$color} !important;
-        }
-    }
-}
-
-code {
-    border-radius: 4px;
-    background: var(--sish-inline-code-background);
-    color: var(--sish-inline-code-color);
-    padding: 0 4px;
-    font-size: 14px;
 }

@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="<%= locals.lng %>">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= page.title %></title>
-
-    <link rel="stylesheet" href="/fonts/font.css">
+    <title>
+        <%= page.title %>
+    </title>
     <link rel="stylesheet" href="/css/style.css">
-
-    <script type="text/javascript" defer src="/js/sish.js"></script>
 </head>
+
 <body>
-    
-    <%- body %>
+
+    <div class="container">
+        <%- include("../partials/header.ejs") %>
+
+        <main class="main">
+            <%- body %>
+        </main>
+
+        <%- include("../partials/footer.ejs") %>
+    </div>
 
 </body>
+
 </html>
